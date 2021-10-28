@@ -2,6 +2,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+
     {% block meta %}
         <meta http-equiv="X-UA-Compatible" content="ie-edge">
         <meta charset="utf-8">
@@ -19,14 +20,20 @@
         <script src="https://kit.fontawesome.com/fb3ce16b7a.js" crossorigin="anonymous"></script>
     {% endblock %}
 
-    <title>Klarart {% block_extra_title %}{% endblock %}</title>
+    <title>Klarart {% block title %}{% endblock %}</title>
   </head>
   <body>
       <header class="container-fluid fixed-top"></header>
 
       {% if messages %}
         <div class="message-container"></div>
-    {% endif %}
+      {% endif %}
+
+    {% block page_header %}
+    {% endblock %}
+
+    {% block content %}
+    {% endblock %}
 
 
 
