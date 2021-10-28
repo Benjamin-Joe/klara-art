@@ -4,4 +4,17 @@ from django.contrib import messages
 
 
 def login_view(request):
-    return render(request, 'authentication/login.html', {})
+    if request.method == "POST":
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+            return redirect('home')
+        
+        else:
+            messages.success(request, "Username/Password Incorrect, Try Again")
+            return redirect('login')
+
+    else:
+        return render(request, 'authentication/login.html', {})
