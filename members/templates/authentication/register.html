@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<br>
+<h1 class="my-5">Register New Account</h1>
+<br>
+
+{% if form.errors %}
+    <p>Oops, Something Went Wrong, Try Again</p>
+{% endif %}
+
+<form action="{% url 'register' %}" method="POST">
+    {% csrf_token %}
+            {{ form }}
+    <button class="btn btn-secondary">Test for register</button>
+</form>
+
+
+{% endblock %}
