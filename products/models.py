@@ -6,6 +6,9 @@ class Category(models.Model):
     name = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
 
+    class Meta:
+        verbose_name_plural = "categories"
+
     def __str__(self):
         return self.name
 
@@ -17,6 +20,10 @@ class Products(models.Model):
     price = models.DecimalField(max_digits=6, decimal_places=2)
     image = models.ImageField(null=True, blank=True)
     description = models.TextField()
+
+    class Meta:
+        verbose_name_plural = "Products"
+
 
     def __str__(self):
         return self.title
