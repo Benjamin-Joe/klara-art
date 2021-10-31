@@ -4,5 +4,24 @@
 {% block content %}
 <br>
 <br>
-<h1>Testing Products Page</h1>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            {% for products in products %}
+            
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="" alt="{{ products.title }}">
+                <div class="card-body">
+                  <h5 class="card-title">{{ products.title }}</h5>
+                  <p class="card-text">{{ products.description }}</p>
+                  <p class="price-text">{{ products.price }}</p>
+                  <a href="#" class="btn btn-primary">View</a>
+                </div>
+              </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
 {% endblock %}
