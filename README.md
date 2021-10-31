@@ -1,3 +1,18 @@
+# Klarart 
+
+## Contents
+[Overview](Overview)  
+[Wireframes](Wireframes)  
+[Languages](Languages)  
+[Website](Website)  
+[Testing](Testing)  
+[Help](Help)  
+[Bugs](Bugs)  
+[Mentions](Mentions)  
+# Overview
+This is my project for portfolio project 5 with code institute. I decided to make an art e-commerce store as my wife is a talented artist, and I wanted to create something that I can actually utilise and help her create her own business. Creating an e-commerce site was both fun and challenging. It has helped me to understand more about the inner workings of django. A language of which I am very fond of. Using bootstrap has also given me a much needed refresher on html and css.
+Having all of the bootstrap information and code gave me the ability to focus on more on the functionality of the website.
+
 # Wireframes
 <br>
 I used wireframes to map out the basic structure of the website. It allowed me to have a visual plan,
@@ -5,9 +20,39 @@ so that I would not stray of course. The creation of the wireframes also helped 
 as to what works well and what doesn't work very well. Bellow are images of the wireframes I created 
 for this project.
 <br>
-![image](https://user-images.githubusercontent.com/83606095/139600176-f746b506-a83f-48c1-a451-576fad7b529f.png)
+
+![Home Wireframe](readme/KlarartHomepage.png)
+
+![About Wireframe](readme/About.png)
+
+![Store Wireframe](readme/StorePage.png)
+
+![Product View Wireframe ](readme/ProductView.png)
+
+![Basket Wireframe](readme/Basket.png)
+
+![Contact Wireframe](readme/Contact.png)
+
+![Portfolio Wireframe](readme/Portfolio.png)
+
+![Sign Up Wireframe](readme/SignUp.png)
+
+![Sign In Wireframe ](readme/Signin.png)
+
+![Manage Account Wireframe](readme/ManageAccount.png)
 
 
+# Languages
+
+# Website
+
+# Testing
+
+# Help
+
+# Bugs
+
+# Mentions
 
 To Do:
 
