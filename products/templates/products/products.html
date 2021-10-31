@@ -10,7 +10,7 @@
             {% for products in products %}
             
             <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="" alt="{{ products.title }}">
+                <img class="card-img-top" src="{{ products.image.url }}" alt="{{ products.title }}">
                 <div class="card-body">
                   <h5 class="card-title">{{ products.title }}</h5>
                   <p class="card-text">{{ products.description }}</p>
