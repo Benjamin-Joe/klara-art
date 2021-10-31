@@ -2,26 +2,34 @@
 {% load static %}
 
 {% block content %}
-<br>
-<br>
-<div class="container">
-    <div class="row">
+
+
+<div class="album py-5 bg-light">
+  <div class="container">
+    {% for products in products %}
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
         <div class="col">
-            {% for products in products %}
-            
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="{{ products.image.url }}" alt="{{ products.title }}">
-                <div class="card-body">
-                  <h5 class="card-title">{{ products.title }}</h5>
-                  <p class="card-text">{{ products.description }}</p>
-                  <p class="price-text">{{ products.price }}</p>
-                  <a href="#" class="btn btn-primary">View</a>
+          <div class="card shadow-sm">
+            {% if products.image.url %}
+              <img class="img-fluid" src="{{ products.image.url }}" alt="{{ products.title }}">
+            {% else %}
+              <img class="img-fluid" src="/media/default.jpg" alt="{{ products.title }}">
+            {% endif %}
+            <div class="card-body">
+              <h5 class="card-title">{{ products.title }}</h5>
+              <p class="card-text">{{ products.description|slice:"50" }}</p>
+              <p class="card-text" >£{{ products.price }}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-secondary">View Product </button>
                 </div>
               </div>
-            {% endfor %}
+            </div>
+          </div>
         </div>
-    </div>
-</div>
+      </div>
+    {% endfor %}
 
 
 {% endblock %}
