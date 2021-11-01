@@ -4,6 +4,10 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 
 
+def newsletter_view(request):
+    return render(request, 'authentication/newsletter.html',)
+
+
 # Login_view code lines 7 -17 taken from django website, make note
 def login_view(request):
     if request.method == "POST":
