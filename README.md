@@ -1,14 +1,19 @@
 # Klarart 
 
 ## Contents
+[Website](Website)  
 [Overview](Overview)  
 [Wireframes](Wireframes)  
 [Languages](Languages)  
-[Website](Website)  
 [Testing](Testing)  
+[Facebook](Facebook)
 [Help](Help)  
 [Bugs](Bugs)  
 [Mentions](Mentions)  
+
+# Website
+
+
 # Overview
 This is my project for portfolio project 5 with code institute. I decided to make an art e-commerce store as my wife is a talented artist, and I wanted to create something that I can actually utilise and help her create her own business. Creating an e-commerce site was both fun and challenging. It has helped me to understand more about the inner workings of django. A language of which I am very fond of. Using bootstrap has also given me a much needed refresher on html and css.
 Having all of the bootstrap information and code gave me the ability to focus on more on the functionality of the website.
@@ -44,9 +49,17 @@ for this project.
 
 # Languages
 
-# Website
-
 # Testing
+
+# Facebook
+I created a facebook business page to go along with the website, As time goes on I will edit and grow the page to increase customer flow
+<br>
+
+![Facebook Business Picture 1](readme/facebook-business1.png)
+
+![Facebook Business Picture 2](readme/facebook-business2.png)
+
+![Facebook Business Picture 3](readme/facebook-business3.png)
 
 # Help
 
