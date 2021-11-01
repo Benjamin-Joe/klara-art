@@ -25,6 +25,8 @@ so that I would not stray of course. The creation of the wireframes also helped 
 as to what works well and what doesn't work very well. Bellow are images of the wireframes I created 
 for this project.
 <br>
+Change To wireframes:  
+I decided to remove the portfolio page as I felt like it could all be said within the about section of the website
 
 ![Home Wireframe](readme/KlarartHomepage.png)
 
@@ -37,8 +39,6 @@ for this project.
 ![Basket Wireframe](readme/Basket.png)
 
 ![Contact Wireframe](readme/Contact.png)
-
-![Portfolio Wireframe](readme/Portfolio.png)
 
 ![Sign Up Wireframe](readme/SignUp.png)
 
