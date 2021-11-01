@@ -6,20 +6,20 @@
 {% block header %}Store {% endblock %}
 <div class="album py-5 bg-light">
   <div class="container">
-    {% for products in products %}
+    {% for product in products %}
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 
         <div class="col">
           <div class="card shadow-sm">
-            {% if products.image.url %}
-              <img class="img-fluid" src="{{ products.image.url }}" alt="{{ products.title }}">
+            {% if product.image.url %}
+              <img class="img-fluid" src="{{ product.image.url }}" alt="{{ product.title }}">
             {% else %}
-              <img class="img-fluid" src="/media/default.jpg" alt="{{ products.title }}">
+              <img class="img-fluid" src="/media/default.jpg" alt="{{ product.title }}">
             {% endif %}
             <div class="card-body">
-              <h5 class="card-title">{{ products.title }}</h5>
-              <p class="card-text">{{ products.description|slice:"50" }}</p>
-              <p class="card-text" >£{{ products.price }}</p>
+              <h5 class="card-title">{{ product.title }}</h5>
+              <p class="card-text">{{ product.description|slice:"50" }}</p>
+              <p class="card-text" >£{{ product.price }}</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-secondary">View Product </button>
