@@ -22,7 +22,7 @@
               <p class="card-text" >£{{ product.price }}</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-secondary">View Product </button>
+                  <button type="button" class="btn btn-sm btn-secondary"> <a href="{% url 'product_detail' product.id %}"> View Product </a></button>
                 </div>
               </div>
             </div>
