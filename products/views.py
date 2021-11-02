@@ -1,5 +1,11 @@
 from django.shortcuts import render
-from .models import Products
+from .models import Products, Category
+
+
+def categories(request):
+    return {
+        'categories': Category.objects.all()
+    }
 
 
 # Products view

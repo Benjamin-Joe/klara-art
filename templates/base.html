@@ -47,11 +47,11 @@
               Categories
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
+              {% for category in categories %}
+                <a class="dropdown-item" href="#">{{ category.name|title }}</a>
+
             </div>
+            {% endfor %}
           </li>
             </ul>
             <li class="nav-item dropdown list-unstyled ">

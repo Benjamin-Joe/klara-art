@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from .forms import Contact_Form
 
-
 # Homepage view
 def home_view(request):
     return render(request, 'home/home.html')
