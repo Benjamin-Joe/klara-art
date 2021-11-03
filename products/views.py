@@ -20,20 +20,31 @@ def categories(request):
 
 
 # Products view
+# Search bar view
+# Category dropdown view
 def products_view(request):
     products = Products.objects.all()
+
+    category = request.GET.get('category')
+    if category is None:
+        products = Products.objects.all()
+    else:
+        products = Products.objects.filter(category__name=category)
+    categories = Category.objects.all()
+   
     query = None
     if request.GET:
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                print(request, "Not Matches Found")
+                print(request, "")
                 return redirect(reverse('products'))
             queries = Q(title__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
     context = {
         'products': products,
         'search_term': query,
+        'categories': categories
     }
 
     return render(request, 'products/products.html', context)
