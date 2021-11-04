@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from .models import Products, Category
 from django.db.models import Q
+from basket import views
 
 
 # For for individual products

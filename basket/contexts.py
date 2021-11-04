@@ -7,14 +7,14 @@ def basket_contents(request):
 
     basket_items = []
     total = 0
-    product_number = 0
-    delivery = 4.99
+    product_count = 0
+    delivery = 0
     grand_total = total + delivery
   
     context = {
         'basket_items': basket_items,
         'total': total,
-        'product_number': product_number,
+        'product_count': product_count,
         'delivery': delivery,
         'grand_total': grand_total,
     }
