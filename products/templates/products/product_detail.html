@@ -18,7 +18,16 @@
         <div class="card-body">
           <h5 class="card-title">{{ product.title }}</h5>
           <p class="card-text">{{ product.description }}</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <div class="col-6">
+            <label for="select">Size</label>
+            <select id="select">
+                <option value="">8 x 10"</option>
+                <option value="">12 x 16"</option>
+                <option value="">20 x 24"</option>
+                <option value="">30 x 26"</option>
+            </select>
+        </div>
+          <a href="#" class="btn btn-primary">Add To Basket</a>
         </div>
       </div>
     </div>
