@@ -5,7 +5,23 @@
 {% endblock %}
 
 {% block content %}
-<br><br><br><br>
-{{ product.title }}
-{{ product.image }}
+
+<div class="row">
+    <div class="col-sm-6">
+        <div class="card">
+            <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.title }}">
+          </div>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{ product.title }}</h5>
+          <p class="card-text">{{ product.description }}</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
 {% endblock %}
