@@ -1,15 +1,15 @@
 # Klarart 
 
 ## Contents
-[Website](Website)  
-[Overview](Overview)  
-[Wireframes](Wireframes)  
-[Languages](Languages)  
-[Testing](Testing)  
-[Facebook](Facebook)
-[Help](Help)  
-[Bugs](Bugs)  
-[Mentions](Mentions)  
+1. [Website](Website)  
+2. [Overview](Overview)  
+3. [Wireframes](Wireframes)  
+4. [Languages](Languages)  
+5. [Testing](Testing)  
+6. [Facebook](Facebook)
+7. [Help](Help)  
+8. [Bugs](Bugs)  
+9. [Mentions](Mentions)  
 
 # Website
 

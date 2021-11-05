@@ -23,13 +23,17 @@ def basket_contents(request):
             'quantity': quantity,
             'product': product,
         })
-        grand_total = total + delivery
-  
+
+    grand_total = total + delivery
+    
     context = {
         'basket_items': basket_items,
         'total': total,
         'product_count': product_count,
         'delivery': delivery,
-        'grand_total': grand_total,
+        'grand_total': grand_total
+
     }
+
+
     return context
