@@ -5,54 +5,80 @@
 
 {% block content %}
 
-
-
-<div class="container">
-
+<div class="container mb-2">
     <div class="row">
         <div class="col">
-            <h1>Basket</h1>
+            <hr>
+            <h1 class="text-black">Shopping Basket</h1>
+            <hr>
         </div>
     </div>
-
     <div class="row">
         <div class="col">
             {% if basket_items %}
             <div class="table-responsive rounded">
-                <thead class="text-black">
+                <table class="table table-sm">
+                    <thead class="text-black">
+                        <tr>
+                            <th scope="col">Product Image</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Qty</th>
+                            <th scope="col">Subtotal</th>
+                        </tr>
+                    </thead>
+
+                    {% for item in basket_items %}
                     <tr>
-                        <th scope="col">Product Info</th>
-                        <th scope="col"></th>
-                        <th scope="col">Price</th>
-                        <th scope="col">Qty</th>
-                        <th scope="col">Subtotal</th>
+                        <td class="p-3 w-25">
+                            <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ item.product.title }}">
+                        </td>
+                        <td class="py-3">
+                            <p>{{ item.product.title }}</p>
+                        </td>
+                        <td class="py-3">
+                            <p>{{ item.product.price }}</p>
+                        </td>
+                        <td class="py-3">
+                            <p>{{ item.quantity }}</p>
+                        </td>
+                        <td class="py-3">
+                            <p>{{ item.product.price }}</p>
+                        </td>
                     </tr>
-                </thead>
-                {% for item in basket_items %}
-                <tr>
-                    <td class="p-3 w-25">
-                        <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ item.product.title }}">
-                    </td>
-                    <td class="py-3">
-                        <p>{{ item.product.title }}</p>
-                    </td>
-                    <td class="py-3">
-                        <p>{{ item.product.price }}</p>
-                    </td>
-                    <td class="py-3 w-25">
-                        {{ item.quantity }}
-                    </td>
-                    <td class="py-3">
-                        <p>{{ item.product.price }}</p>
-                    </td>
-                </tr>
-                {% endfor %}
-                <tr>
-                    <td colspan="5" class="pt-5 text-right">
-                        <h2>Basket Total: £{{ grand_total|floatformat:2 }}</h2>
-                    </td>
-                </tr>
+                    {% endfor %}
+                    <tr>
+                        <td colspan="5" class="pt-5 text-right">
+                            <h4>Basket Total: £{{ total|floatformat:2 }}</h4>
+                            <h2>Grand Total: £{{ grand_total|floatformat:2 }}</h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" class="text-right">
+                            <a href="{% url 'products' %}" class="btn btn-secondary">
+                                <span class="icon">
+                                    <i class="fas fa-chevron-left"></i> 
+                                </span>
+                                <span>Keep Shopping</span>
+                            </a>
+                            <a href="" class="btn btn-secondary">
+                                <span>Checkout</span>
+                                <span class="icon">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
             </div>
+            {% else %}
+            <p>Your Basket Is Empty</p>
+            <a href="{% url 'products' %}" class="btn btn-secondary">
+                <span class="icon">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+                <span>Keep Shopping</span>
+            </a>
             {% endif %}
         </div>
     </div>
