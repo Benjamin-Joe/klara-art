@@ -8,17 +8,54 @@
 
 
 <div class="container">
+
     <div class="row">
         <div class="col">
             <h1>Basket</h1>
         </div>
     </div>
-    <div class="col">
-        {% if basket_items %}
-            <div class="table-responsive"></div>
-        {% else %}
-            <p>This will show empty basket</p>
-        {% endif %}
+
+    <div class="row">
+        <div class="col">
+            {% if basket_items %}
+            <div class="table-responsive rounded">
+                <thead class="text-black">
+                    <tr>
+                        <th scope="col">Product Info</th>
+                        <th scope="col"></th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Qty</th>
+                        <th scope="col">Subtotal</th>
+                    </tr>
+                </thead>
+                {% for item in basket_items %}
+                <tr>
+                    <td class="p-3 w-25">
+                        <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ item.product.title }}">
+                    </td>
+                    <td class="py-3">
+                        <p>{{ item.product.title }}</p>
+                    </td>
+                    <td class="py-3">
+                        <p>{{ item.product.price }}</p>
+                    </td>
+                    <td class="py-3 w-25">
+                        {{ item.quantity }}
+                    </td>
+                    <td class="py-3">
+                        <p>{{ item.product.price }}</p>
+                    </td>
+                </tr>
+                {% endfor %}
+                <tr>
+                    <td colspan="5" class="pt-5 text-right">
+                        <h2>Basket Total: £{{ grand_total|floatformat:2 }}</h2>
+                    </td>
+                </tr>
+            </div>
+            {% endif %}
+        </div>
     </div>
 </div>
+
 {% endblock %}
