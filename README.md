@@ -28,23 +28,6 @@ for this project.
 Change To wireframes:  
 I decided to remove the portfolio page as I felt like it could all be said within the about section of the website
 
-![Home Wireframe](readme/KlarartHomepage.png)
-
-![About Wireframe](readme/About.png)
-
-![Store Wireframe](readme/StorePage.png)
-
-![Product View Wireframe ](readme/ProductView.png)
-
-![Basket Wireframe](readme/Basket.png)
-
-![Contact Wireframe](readme/Contact.png)
-
-![Sign Up Wireframe](readme/SignUp.png)
-
-![Sign In Wireframe ](readme/Signin.png)
-
-![Manage Account Wireframe](readme/ManageAccount.png)
 
 
 # Languages
@@ -54,12 +37,6 @@ I decided to remove the portfolio page as I felt like it could all be said withi
 # Facebook
 I created a facebook business page to go along with the website, As time goes on I will edit and grow the page to increase customer flow
 <br>
-
-![Facebook Business Picture 1](readme/facebook-business1.png)
-
-![Facebook Business Picture 2](readme/facebook-business2.png)
-
-![Facebook Business Picture 3](readme/facebook-business3.png)
 
 # Help
 
