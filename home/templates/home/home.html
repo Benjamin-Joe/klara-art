@@ -6,14 +6,23 @@
 {% block content %}
 
 
-<div class="container h-100 my-5">
-    <div class="row h-100">
-        <div class="col my-auto">
-            <h1>Testing</h1>
-            <p>This is where the carousel will go</p>
+<div class="container my-5">
+    <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">Welcome To Klarart</h1>
+          <p class="lead text-muted">
+              Whether it's a gift for a loved one, or something for youself.
+              Klarart is sure to have something you like. If not, get in touch.
+              We make custom, handmade pieces
+          </p>
+          <p>
+            <a href="{% url 'products' %}" class="btn btn-primary my-2"> Shop Now  </a>
+            <a href="{% url 'contact' %}" class="btn btn-secondary my-2">Get In Touch</a>
+          </p>
 
         </div>
-    </div>
+      </section>
+</div>
 </div>
 
 {% endblock %}

@@ -5,55 +5,61 @@
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col text-center">
-      <h1>All Products</h1>
-    </div>
+      <div class="col text-center mt-2">
+          <h2>Store</h2>
+          <hr>
+      </div>
   </div>
   <div class="row">
-    <div class="product-container col-10 offset-1">
-      <div class="row mt-1 mb-2"></div>
-      <div class="row">
-        {% for product in products %}
-          <div class="col-sm-6 col-md-6 col-lg-4 col.xl-3">
-            <div class="card h-100 border-0">
-              <a href="{% url 'product_detail' product.id %}">
-                <img src="{{ product.image.url }}" alt="{{ product.name }}" class="card-img-top img-fluid">
-              </a>
-              <div class="card-footer bg-white pt-0 border.0 text-center">
-                <div class="row">
-                  <div class="col">
-                    <p class="text-center">{{ product.title }}</p>
-                    <p class="text-center font-weight-bold">£{{ product.price }}</p>
-                  </div>
-                  <button class="btn btn-primary"><a class="text-white" href="{% url 'product_detail' product.id %}"> View Product</a></button>
+      <div class="product-container col-10 offset-1">
+          <div class="row mt-1 mb-2"></div>
+          <div class="row">
+              {% for product in products %}
+              <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                  <div class="card border-1px-black main-card">
+                      <p class="text-center">{{ product.title }}</p>
+                      <a href="">
+                          <img class="cart-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.title }}">
+                      </a>
+                      <div class="card-body pd-0">
 
-                </div>
+                          <p>{{ product.description|slice:40 }}....</p>
+                      </div>
+                      <div card-footer bg-white pt-0 border-0 text-left>
+                          <div class="row">
+                              <div class="col">
+                                  <p class="lead mb-0 text-left">£ {{ product.price }}</p>
+
+                              </div>
+                              <p class=" text-left btn btn-secondary ml-5"><a href="{% url 'product_detail' product.id %}"> View </a></p>
+                          </div>
+                      </div>
+                  </div>
               </div>
-            </div>
+              {% if forloop.counter|divisibleby:1 %}
+              <div class="col-12 d-sm-none mb-5">
+                  <hr>
+              </div>
+              {% endif %}
+              {% if forloop.counter|divisibleby:2 %}
+              <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                  <hr>
+              </div>
+              {% endif %}
+              {% if forloop.counter|divisibleby:3 %}
+              <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                  <hr>
+              </div>
+              {% if forloop.counter|divisibleby:4 %}
+              <div class="col-12 d-none d-xl-block mb-5">
+                  <hr>
+              </div>
+              {% endif %}
+              {% endif %}
+          {% endfor %}
           </div>
-          {% if forloop.counter|divisibleby:1 %}
-          <div class="col-12 d-sm-none mb-5">
-            <hr>
-        </div>
-    {% endif %}                        
-    {% if forloop.counter|divisibleby:2 %}
-        <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
-            <hr>
-        </div>
-    {% endif %}
-    {% if forloop.counter|divisibleby:3 %}
-        <div class="col-12 d-none d-lg-block d-xl-none mb-5">
-            <hr>
-        </div>
-    {% endif %}
-    {% if forloop.counter|divisibleby:4 %}
-        <div class="col-12 d-none d-xl-block mb-5">
-            <hr>
-        </div>
-    {% endif %}
       </div>
-    </div>
   </div>
 </div>
-{% endfor %}
+
 {% endblock %}
