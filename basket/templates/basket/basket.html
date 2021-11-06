@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load basket_tools %}
 {% block page_header %}
 {% endblock %}
 
@@ -43,7 +44,7 @@
                             <p>{{ item.quantity }}</p>
                         </td>
                         <td class="py-3">
-                            <p>{{ item.product.price }}</p>
+                            <p>{{ item.product.price | calculate_subtotal:item.quantity }}</p>
                         </td>
                     </tr>
                     {% endfor %}
